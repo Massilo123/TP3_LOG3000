@@ -11,6 +11,24 @@ OPS = {
 }
 
 def calculate(expr: str):
+    """Calcule le résultat d'une expression binaire de type "<nombre><opérateur><nombre>".
+
+    Paramètres
+    ----------
+    expr : str
+        Chaîne provenant de l'utilisateur, censée contenir exactement un opérateur parmi OPS.
+
+    Retour
+    ------
+    float
+        Résultat numérique obtenu après conversion des opérandes et application de l'opérateur.
+
+    Exceptions
+    ----------
+    ValueError
+        Levée si l'expression est vide, mal placée, comporte plusieurs opérateurs
+        ou si les opérandes ne sont pas convertibles en nombres flottants.
+    """
     if not expr or not isinstance(expr, str):
         raise ValueError("empty expression")
 
@@ -19,6 +37,7 @@ def calculate(expr: str):
     op_pos = -1
     op_char = None
 
+    # On mémorise la position de l'opérateur en s'assurant qu'il n'y en ait qu'un seul.
     for i, ch in enumerate(s):
         if ch in OPS:
             if op_pos != -1:
@@ -43,6 +62,7 @@ def calculate(expr: str):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    """Afficher l'interface de la calculatrice et traiter l'expression soumise."""
     result = ""
     if request.method == 'POST':
         expression = request.form.get('display', '')
