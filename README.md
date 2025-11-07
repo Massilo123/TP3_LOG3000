@@ -7,8 +7,8 @@
 Application web minimaliste, écrite avec Flask, qui expose une calculatrice arithmétique élémentaire. L’interface web permet de saisir une expression contenant deux opérandes et un seul opérateur (`+`, `-`, `*`, `/`). Le serveur valide la saisie, effectue l’opération en Python et renvoie le résultat ou un message d’erreur formaté. Le dépôt inclut également la structure HTML/CSS et une documentation de module pour guider les nouveaux contributeurs.
 
 ## Prérequis
-- Python 3.10 ou plus (développé et vérifié sous Python 3.11)
-- `pip` disponible dans le PATH
+- Python 3.10 ou plus
+- `pip` 
 - Accès internet pour installer les dépendances
 
 ## Installation pas à pas
