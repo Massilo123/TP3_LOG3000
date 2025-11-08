@@ -6,7 +6,7 @@ def add(a,b):
 
 def subtract(a,b):
     """Retourner la différence en calculant le second opérande moins le premier."""
-    return b - a
+    return a - b
 
 def multiply(a,b):
     """Retourner le produit des deux opérandes."""
