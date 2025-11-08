@@ -13,5 +13,5 @@ def multiply(a,b):
     return a * b
 
 def divide(a,b):
-    """Retourner le quotient entier issu de la division euclidienne du premier opérande par le second."""
-    return a // b
+    """Retourner le quotient réel obtenu en divisant le premier opérande par le second."""
+    return a / b
