@@ -5,7 +5,7 @@ def add(a,b):
     return a + b
 
 def subtract(a,b):
-    """Retourner la différence en calculant le second opérande moins le premier."""
+    """Retourner la différence en calculant le premier opérande moins le second."""
     return a - b
 
 def multiply(a,b):
